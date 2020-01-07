@@ -1,0 +1,26 @@
+.settings-page {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: white;
+
+    .fields > * {
+        margin-top: 10px;
+    }
+
+    .resolution {
+        display: flex;
+        justify-content: space-between;
+
+        & > * {
+            flex: 0 1 45%;
+        }
+    }
+
+    .back {
+        margin-top: 20px;
+    }
+}

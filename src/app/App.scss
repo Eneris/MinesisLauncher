@@ -1,0 +1,56 @@
+
+@font-face {
+  font-family: Minecraft;
+  src: url("./resources/minecraft.woff2") format("woff2"),
+       url("./resources/minecraft.woff") format("woff")
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  user-select: none !important;
+  user-zoom: unset !important;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 10px 10px 10px;
+
+  background-image: url('./resources/background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  -webkit-app-region: drag;
+
+  & > .tab {
+    -webkit-app-region: none;
+  }
+}
+
+.tab {
+  font-weight: bold;
+  background-color: rgba(48, 48, 48, 0.8);
+  border: none;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+*:disabled {
+  pointer-events: none;
+}
+
+.flex-1 {
+  flex: 1;
+}

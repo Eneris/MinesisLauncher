@@ -1,0 +1,23 @@
+@import '../variables';
+
+.server-status {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    color: white;
+
+    .status {
+        font-size: 13px;
+        font-family: Minecraft;
+    }
+
+    .online {
+        color: #00FF00;
+    }
+
+    .offline {
+        color: #FF0000;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,21 @@
+@import '../variables';
+
+@keyframes progressFill {
+  from {
+    background-position: left bottom;
+  }
+
+  to   {
+    background-position: right bottom;
+  }
+}
+
+.is-loading {
+  transition: all 0.3s ease 0s;
+  background: linear-gradient(to right, $green 100%, transparent 100%);
+  background-size: 0%;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-position-x: left;
+  // animation: progressFill 6s -0.1s ease-in-out forwards;
+}
