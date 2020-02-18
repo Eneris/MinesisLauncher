@@ -37,7 +37,7 @@ export default class PlayButton extends React.Component {
             username,
             version: version || localStorage.getItem('serverVersion') || '1.15.1',
             server: { host, port, name: "Minesis Survival" },
-            autoConnect: false // localStorage.getItem('autoConnect') !== "false"
+            autoConnect: localStorage.getItem('autoConnect') !== "false"
         })
     }
 

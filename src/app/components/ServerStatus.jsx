@@ -82,7 +82,7 @@ export default class ServerStatus extends React.Component {
                 <div className="status online">Online</div>
                 <div className="version">Minesis Survival</div>
                 <div className="players">{`${players.online} / ${players.max}`}</div>
-                {/* <Switch onChange={this.handleAutoConnect} defaultChecked={autoConnect} /> */}
+                <Switch onChange={this.handleAutoConnect} defaultChecked={autoConnect} title="Autoconnect" />
             </div>
         )
     }
