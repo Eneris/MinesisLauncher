@@ -1,12 +1,12 @@
 {
   "name": "minesis-launcher",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "main": "build/electron.js",
   "scripts": {
     "build": "npx webpack --mode=production",
     "build:dev": "npx webpack --mode=development",
-    "package": "npx electron-builder -mwl",
+    "package": "npx electron-builder -mwl && node ./createBuildJson.js",
     "dev:app": "npx webpack-dev-server --hot",
     "dev:electron": "npx electron ./build/electron.js",
     "dev": "npm run build && npx concurrently \"npx cross-env BROWSER=none npm run dev:app\" \"wait-on http://localhost:8080 && npm run dev:electron\"",
