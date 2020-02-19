@@ -35,9 +35,9 @@ export default class PlayButton extends React.Component {
 
         ipcRenderer.send('mc:start', {
             username,
-            version: version || localStorage.getItem('serverVersion') || '1.15.1',
+            version: version || localStorage.getItem('serverVersion') || '1.15.2',
             server: { host, port, name: "Minesis Survival" },
-            autoConnect: localStorage.getItem('autoConnect') !== "false"
+            autoConnect: localStorage.getItem('autoConnect') === "true"
         })
     }
 

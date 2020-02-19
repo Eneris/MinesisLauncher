@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 import './Switch.scss'
 
-export default ({defaultChecked, className, onChange, ...props}) => {
+export default ({defaultChecked, className, onChange, title, ...props}) => {
     const [ checked, setChecked ] = useState(defaultChecked)
 
     const handleAutoConnect = () => {
@@ -12,7 +12,7 @@ export default ({defaultChecked, className, onChange, ...props}) => {
     }
 
     return (
-        <label className={classnames("switch", className)}>
+        <label className={classnames("switch", className)} title={title}>
             <input
                 type="checkbox"
                 defaultChecked={checked}

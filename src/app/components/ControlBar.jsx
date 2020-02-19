@@ -16,6 +16,7 @@ export default ({settingsButton}) => (
                 <FontAwesomeIcon icon="minus" />
             </div>
         </div>
+        <div class="drag"></div>
         {false && <FontAwesomeIcon
             icon="cog"
             onClick={() => setPage(PAGES.SETTINGS)}

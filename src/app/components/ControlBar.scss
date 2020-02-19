@@ -1,30 +1,41 @@
 .control-bar {
-//   -webkit-app-region: drag;
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+
+  .window-buttons,
+  .drag {
+    padding: 10px 0;
+  }
 
   .window-buttons {
     display: flex;
     cursor: pointer;
+    -webkit-app-region: none;
 
     div {
-        padding: 2px;
-        height: 14px;
-        width: 14px;
-        text-align: center;
-        border-radius: 30px;
-        margin: 2px 4px 2px 4px;
-        font-size: 10px;
+      padding: 2px;
+      height: 14px;
+      width: 14px;
+      text-align: center;
+      border-radius: 30px;
+      margin: 2px 4px 2px 4px;
+      font-size: 10px;
     }
 
     .minimise {
-        background-color: yellow;
+      background-color: yellow;
     }
 
     .close {
-        background-color: red;
+      background-color: red;
     }
+  }
+
+  .drag {
+    display: black;
+    flex: 1 0;
+    padding: 15px 0;
+    -webkit-app-region: drag;
   }
 
   .settings-link {

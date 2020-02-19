@@ -1,0 +1,39 @@
+.page-updater {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    text-align: center;
+
+    * {
+        font-family: Minecraft;
+    }
+
+    .versions {
+        .old {
+            color: red
+        }
+
+        .new {
+            color: lime;
+        }
+    }
+
+    .links {
+        font-size: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        a {
+            text-decoration: none;
+            color: grey;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
+  

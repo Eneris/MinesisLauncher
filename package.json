@@ -1,6 +1,6 @@
 {
   "name": "minesis-launcher",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "description": "",
   "main": "build/electron.js",
   "scripts": {
@@ -24,6 +24,7 @@
     "@babel/preset-react": "^7.7.4",
     "@eneris/minecraft-client": "^3.1.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@types/react": "^16.9.17",
@@ -39,8 +40,8 @@
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
     "i": "^0.3.6",
-    "node-sass": "^4.13.0",
-    "npm": "^6.13.6",
+    "node-sass": "^4.13.1",
+    "npm": "^6.13.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-hot-loader": "^4.12.18",

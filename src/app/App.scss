@@ -31,12 +31,6 @@ body,
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  -webkit-app-region: drag;
-
-  & > .tab {
-    -webkit-app-region: none;
-  }
 }
 
 .tab {

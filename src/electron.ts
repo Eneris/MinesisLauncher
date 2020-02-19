@@ -4,6 +4,7 @@ import buildMenu from "./electron/menu"
 import isDev from "./electron/isDev"
 
 import './electron/minecraft'
+import './electron/updater'
 
 const app = electron.app || electron.remote.app
 const BrowserWindow = electron.BrowserWindow
@@ -20,12 +21,13 @@ function createWindow() {
         width: 400,
         height: 550,
         frame: false,
+        resizable: false,
         webPreferences: {
             nodeIntegration: true
         }
     })
 
-    if (isDev || true) {
+    if (isDev) {
       mainWindow.openDevTools()
     }
 
