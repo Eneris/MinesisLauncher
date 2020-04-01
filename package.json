@@ -1,6 +1,6 @@
 {
   "name": "minesis-launcher",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "",
   "main": "build/electron.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-react": "^7.7.4",
-    "@eneris/minecraft-client": "^3.1.0",
+    "@eneris/minecraft-client": "^3.1.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",

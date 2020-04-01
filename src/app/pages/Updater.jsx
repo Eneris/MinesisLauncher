@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Logo from '../components/Logo'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ipcRenderer } from 'electron'
+import UpdateLinks from '../components/UpdateLinks'
 
 import './Updater.scss'
 
@@ -55,17 +55,12 @@ export default class Updater extends Component {
                     <span> -> </span>
                     <span className="new">{availableVersion.version}</span>
                 </div>
-                <div className="links">
-                    <a href={`${baseUrl}/${availableVersion.links.mac}?rand=${Math.random()}`}>
-                        <FontAwesomeIcon icon={['fab', 'apple']} />
-                    </a>
-                    <a href={`${baseUrl}/${availableVersion.links.win}?rand=${Math.random()}`}>
-                        <FontAwesomeIcon icon={['fab', 'windows']} />
-                    </a>
-                    <a href={`${baseUrl}/${availableVersion.links.linux}?rand=${Math.random()}`}>
-                        <FontAwesomeIcon icon={['fab', 'linux']} />
-                    </a>
-                </div>
+                <UpdateLinks
+                    baseUrl={baseUrl}
+                    mac={availableVersion.links.mac}
+                    win={availableVersion.links.win}
+                    linux={availableVersion.links.linux}
+                />
                 {state && (
                     <div className="is-loading" style={state === STATES.PROGRESS ? {backgroundSize: stateData + '%'} : {}}>
                         {stateData ? `${state}: ${stateData}` : state}

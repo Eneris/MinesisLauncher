@@ -17,10 +17,10 @@ export default ({settingsButton}) => (
             </div>
         </div>
         <div class="drag"></div>
-        {false && <FontAwesomeIcon
+        <FontAwesomeIcon
             icon="cog"
             onClick={() => setPage(PAGES.SETTINGS)}
             className="settings-link"
-        />}
+        />
     </div>
 )

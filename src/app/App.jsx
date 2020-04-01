@@ -14,7 +14,7 @@ import { faApple, faWindows, faLinux } from '@fortawesome/free-brands-svg-icons'
 
 library.add(faCog, faCircle, faMinus, faTimes, faPlus, faApple, faWindows, faLinux)
 
-export const UPDATER_URL = 'http://mcupdater.eneris.wtf'
+export const UPDATER_URL = 'https://mclauncher.project-nemesis.cz'
 
 export const PAGES = {
   DASHBOARD: 'dashboard',

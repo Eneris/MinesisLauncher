@@ -19,21 +19,5 @@
             color: lime;
         }
     }
-
-    .links {
-        font-size: 60px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-
-        a {
-            text-decoration: none;
-            color: grey;
-
-            &:hover {
-                color: white;
-            }
-        }
-    }
 }
   

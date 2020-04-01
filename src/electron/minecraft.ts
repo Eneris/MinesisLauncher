@@ -13,7 +13,8 @@ import mcping from './mcping'
 export declare interface MinecraftStartArgs extends LaunchOptions {
     version: string,
     username: string,
-    autoConnect: boolean
+    autoConnect: boolean,
+    memory: string
 }
 
 export declare interface ServerAddress {
@@ -48,7 +49,21 @@ ipcMain.on('mc:start', async (e: IpcMainEvent, args: MinecraftStartArgs) => {
             }
         ))
 
-        await client.checkInstallation()
+        let installOk = false
+        let attemptCounter = 1;
+        while (!installOk) {
+            try {
+                await client.checkInstallation()
+                installOk = true
+            } catch (e) {
+                attemptCounter = attemptCounter + 1
+                console.error(e)
+
+                if (attemptCounter >= 10) {
+                    throw e
+                }
+            }
+        }
 
         if (args.server && args.server.host) {
             await client.ensureServersDat(args.server)
@@ -59,7 +74,8 @@ ipcMain.on('mc:start', async (e: IpcMainEvent, args: MinecraftStartArgs) => {
         game = await client.launch(Authentication.offline(args.username), {
             redirectOutput: false,
             resolution: args.resolution,
-            server: args.autoConnect && args.server
+            server: args.autoConnect && args.server,
+            memory: args.memory
         })
 
         currentWindow.webContents.send('mc:ingame', {ingame: true})
